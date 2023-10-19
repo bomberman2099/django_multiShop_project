@@ -7,23 +7,26 @@ class User(AbstractBaseUser):
     email = models.EmailField(
         verbose_name="آدرس ایمیل",
         max_length=255,
+        null=True,
+        blank=True,
         unique=True,
     )
     fullname = models.CharField(max_length=50, verbose_name="نام کامل")
+    phone = models.CharField(max_length=12,unique=True, verbose_name='شماره تلفن')
     is_active = models.BooleanField(default=True, verbose_name="فعال")
     is_admin = models.BooleanField(default=False, verbose_name='ادمین')
 
     objects = UserManager()
 
-    USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ['fullname']
+    USERNAME_FIELD = "phone"
+    REQUIRED_FIELDS = ['fullname', 'email']
 
     class Meta:
         verbose_name = 'کاربر'
         verbose_name_plural = 'کاربر ها'
 
     def __str__(self):
-        return self.email
+        return f"{self.phone} - {self.fullname}"
 
     def has_perm(self, perm, obj=None):
         "Does the user have a specific permission?"
