@@ -17,30 +17,40 @@
 
     <!-- Contact Start -->
     <div class="container-fluid">
-        <h2 class="section-title position-relative text-uppercase text-center mx-xl-5 mb-4"><span class="bg-secondary pr-3">login</span></h2>
+        <h2 class="section-title position-relative text-uppercase text-center mx-xl-5 mb-4"><span
+                class="bg-secondary pr-3">login</span></h2>
         <div class=" px-xl-5">
             <div class=" mb-5 contact-us" style="">
                 <div class="contact-form bg-light p-30">
                     <div id="success"></div>
-                    <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                    <form method="post">
+                        {% csrf_token %}
                         <div class="control-group">
-                            <input type="text" class="form-control" id="name" placeholder="Your phone number"
-                                required="required" data-validation-required-message="Please enter your name" />
+
+                            {% for error in form.phone.errors %}
+                                {% if forloop.last %}
+                                    <p class="btn alert-info">You hit {{ forloop.counter }} errors! </p>
+                                {% endif %}
+                            {% endfor %}
+                            {% for error in form.phone.errors %}
+                                <p class="alert alert-danger">{{ error }}</p>
+                            {% endfor %}
+                            {{ form.phone }}
                             <p class="help-block text-danger"></p>
                         </div>
                         <div class="control-group">
-                            <input type="password" class="form-control" id="email" placeholder="Your password"
-                                required="required" data-validation-required-message="Please enter your email" />
+                            {{ form.password }}
                             <p class="help-block text-danger"></p>
                         </div>
                         <div>
-                            <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">login</button>
+                            <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">login
+                            </button>
                         </div>
                     </form>
                 </div>
             </div>
-           
+
         </div>
     </div>
     <!-- Contact End -->
-    {% endblock content %}
+{% endblock content %}

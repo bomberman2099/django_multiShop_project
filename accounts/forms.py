@@ -1,5 +1,6 @@
 from django import forms
 from django.contrib.auth.forms import ReadOnlyPasswordHashField
+from django.core import validators
 from django.core.exceptions import ValidationError
 from accounts.models import User
 
@@ -45,3 +46,35 @@ class UserChangeForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ["email", "password", "fullname", "is_active", "is_admin"]
+
+def start_with_0(value):
+    if value[0]!='0':
+        raise forms.ValidationError("شماره تلفن بایستی با 0 شروع شود")
+
+class LoginForm(forms.Form):
+    phone = forms.CharField(
+        widget=forms.TextInput(
+            attrs={'class': 'form-control', 'placeholder': 'Your phone number', })
+        , validators=[validators.MaxLengthValidator(11), start_with_0]
+    )
+    password = forms.CharField(
+        widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Your password'}),
+    )
+
+    # def clean_phone(self):
+    #     phone = self.cleaned_data.get('phone')
+    #     if len(phone) > 12:
+    #         raise ValidationError(
+    #             'invalid value: %(value)s is invalid',
+    #             code='invalid',
+    #             params={'value': f'{phone}'},
+    #         )
+    # def clean(self):
+    #     cd = super().clean()
+    #     phone = cd.get('phone') # or cd['phone']
+    #     #     if len(phone) > 12:
+    #     #         raise ValidationError(
+    #     #             'invalid value: %(value)s is invalid',
+    #     #             code='invalid',
+    #     #             params={'value': f'{phone}'},
+    #     #         )
