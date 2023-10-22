@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.contrib.auth.models import Group
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .forms import UserCreationForm, UserChangeForm
-from accounts.models import User
+from accounts.models import User, OTP
 
 
 class UserAdmin(BaseUserAdmin):
@@ -41,3 +41,4 @@ admin.site.register(User, UserAdmin)
 # ... and, since we're not using Django's built-in permissions,
 # unregister the Group model from admin.
 admin.site.unregister(Group)
+admin.site.register(OTP)

@@ -44,3 +44,13 @@ class User(AbstractBaseUser):
         # Simplest possible answer: All admins are staff
         return self.is_admin
 
+
+
+class OTP(models.Model):
+    token = models.CharField(max_length=90, null=True)
+    phone = models.CharField(max_length=11)
+    code = models.CharField(max_length=4)
+    expiration_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.phone
