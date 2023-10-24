@@ -26,15 +26,15 @@
                     <form method="post">
                         {% csrf_token %}
                         <div class="control-group">
-                            {% for error in form.phone.errors %}
+                            {% for error in form.username.errors %}
                                 {% if forloop.last %}
                                     <p class="btn alert-info">You hit {{ forloop.counter }} errors! </p>
                                 {% endif %}
                             {% endfor %}
-                            {% for error in form.phone.errors %}
+                            {% for error in form.username.errors %}
                                 <p class="alert alert-danger">{{ error }}</p>
                             {% endfor %}
-                            {{ form.phone }}
+                            {{ form.username }}
                             <p class="help-block text-danger"></p>
                         </div>
                         <div>

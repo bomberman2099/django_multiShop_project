@@ -52,10 +52,10 @@ def start_with_0(value):
         raise forms.ValidationError("شماره تلفن بایستی با 0 شروع شود")
 
 class LoginForm(forms.Form):
-    phone = forms.CharField(
+    username = forms.CharField(
         widget=forms.TextInput(
             attrs={'class': 'form-control', 'placeholder': 'Your phone number', })
-        , validators=[validators.MaxLengthValidator(11), start_with_0]
+        , validators=[]
     )
     password = forms.CharField(
         widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder': 'Your password'}),
@@ -81,10 +81,10 @@ class LoginForm(forms.Form):
 
 
 class RegisterForm(forms.Form):
-    phone = forms.CharField(
+    username = forms.CharField(label='username',
         widget=forms.TextInput(
             attrs={'class': 'form-control', 'placeholder': 'Your phone number', })
-        , validators=[validators.MaxLengthValidator(11), start_with_0]
+        , validators=[]
     )
 
 
