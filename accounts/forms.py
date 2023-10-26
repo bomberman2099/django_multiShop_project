@@ -81,10 +81,10 @@ class LoginForm(forms.Form):
 
 
 class RegisterForm(forms.Form):
-    username = forms.CharField(label='username',
+    phone = forms.CharField(label='username',
         widget=forms.TextInput(
-            attrs={'class': 'form-control', 'placeholder': 'Your phone number', })
-        , validators=[]
+            attrs={'class': 'form-control', 'placeholder': 'Your phone number'})
+        , validators=[validators.MaxLengthValidator(11), start_with_0]
     )
 
 

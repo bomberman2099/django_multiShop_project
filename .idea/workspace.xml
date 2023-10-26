@@ -19,14 +19,14 @@
       <change afterPath="$PROJECT_DIR$/../djangoProject/faracode_projects/tests.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../djangoProject/faracode_projects/views.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../djangoProject/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/22268f7a-e561-4655-b9f1-cd920fecb783.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/22268f7a-e561-4655-b9f1-cd920fecb783.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/New_shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/New_shop/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/includes/header-navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/header-navbar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../python" beforeDir="false" afterPath="$PROJECT_DIR$/../../python" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +79,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\boruto\programming\django\New_shop\Apps" />
       <recent name="C:\boruto\programming\django\New_shop" />
     </key>
   </component>
@@ -126,6 +127,7 @@
       <workItem from="1697985930343" duration="7200000" />
       <workItem from="1697996661892" duration="590000" />
       <workItem from="1698066690517" duration="8039000" />
+      <workItem from="1698302445022" duration="5536000" />
     </task>
     <servers />
   </component>

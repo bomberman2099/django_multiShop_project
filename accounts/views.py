@@ -1,5 +1,5 @@
 from django.utils.crypto import get_random_string
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
@@ -45,15 +45,15 @@ class UserRegister(View):
         if form.is_valid():
             randomCode = randint(1000,9999)
             cd = form.cleaned_data
-            SMS.verification({'receptor': "09125478539", 'type': '1', 'template': 'Your Template', 'param1': randomCode})
+            SMS.verification({'receptor': cd['phone'], 'type': '1', 'template': 'Your Template', 'param1': randomCode})
             token = str(uuid4())
             OTP.objects.create(phone=cd['phone'], code=randomCode, token=token)
             print(randomCode, cd['phone'])
             return redirect(reverse('accounts:user_check_OTP_register') + f'?token={token}')
-
-        else:
-            form.add_error('phone', 'اطلاعات نا معتبر')
-        return render(request, 'accounts/login.html', {'form': form})
+        #
+        # else:
+        #     form.add_error('phone', 'اطلاعات نا معتبر')
+        return render(request, 'accounts/register.html', {'form': form})
 
 
 
@@ -75,4 +75,9 @@ class Check_User_OTP(View):
                 return redirect('/')
         # else:
         #     form.add_error('phone', 'اطلاعات نا معتبر')
-        return render(request, 'accounts/check_OTP.html', {'form': form})
+            return render(request, 'accounts/check_OTP.html', {'form': form})
+
+
+def user_Logout(request):
+    logout(request)
+    return redirect('/')
