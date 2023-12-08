@@ -3,11 +3,11 @@ from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
 from django.urls import reverse
 from django.views import View
-from .forms import LoginForm, RegisterForm, CheckOTPForm
+from .forms import LoginForm, RegisterForm, CheckOTPForm, AddressCreationsForm
 import ghasedakpack
 from random import randint
 from uuid import uuid4
-from .models import OTP, User
+from .models import OTP, User, Address
 from accounts.authentication import EmailAuthBackEnd
 SMS = ghasedakpack.Ghasedak("f37be99bbfd2da5b474c9303339e6eda55f9feaedad21f211fd8c355c5320bb0")
 
@@ -66,7 +66,7 @@ class Check_User_OTP(View):
         token = request.GET.get('token')
         form = CheckOTPForm(request.POST)
         if form.is_valid():
-            cd = form.cleaned_data #User inputs
+            cd = form.cleaned_data   # User inputs
             if OTP.objects.filter(code=cd['code'], token=token).exists():
                 otp = OTP.objects.get(token=token)
                 user, is_created = User.objects.get_or_create(phone=otp.phone)
@@ -81,3 +81,20 @@ class Check_User_OTP(View):
 def user_Logout(request):
     logout(request)
     return redirect('/')
+
+class AddAddressView(View):
+    def post(self, request):
+        if len(Address.objects.filter(user=request.user)) >=3:
+            return redirect('home:home')
+        form = AddressCreationsForm(request.POST)
+        if form.is_valid():
+            address = form.save(commit=False)
+            address.user = request.user
+            address.save()
+            next_page = request.GET.get('next')
+            if next_page:
+                return redirect(next_page)
+        return render(request, 'accounts/add_address.html', {'form': form})
+    def get(self, request):
+        form = AddressCreationsForm(request.POST)
+        return render(request, 'accounts/add_address.html', {'form': form})

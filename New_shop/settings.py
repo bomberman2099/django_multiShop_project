@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'admin_persian',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,11 +39,17 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # installed django package
+    'admin_persian',
+    'widget_tweaks',
+
 
     # my_apps
     'home.apps.HomeConfig',
     'accounts.apps.AccountsConfig',
-    'product.apps.ProductConfig'
+    'product.apps.ProductConfig',
+    'order.apps.OrderConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -83,8 +89,12 @@ WSGI_APPLICATION = 'New_shop.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'newshopDB',
+        'USER': 'root',
+        'PASSWORD': 'mrbombermanrapy7545',
+        'HOST':'127.0.0.1',
+        'PORT':'3306',
     }
 }
 
@@ -138,3 +148,10 @@ AUTH_USER_MODEL = "accounts.User"
 
 AUTHENTICATION_BACKENDS = ["django.contrib.auth.backends.ModelBackend",
                            "accounts.authentication.EmailAuthBackEnd"]
+
+CACHES = {
+    "default": {
+        "BACKEND": "django.core.cache.backends.redis.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379",
+    }
+}

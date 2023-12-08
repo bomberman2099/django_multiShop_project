@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from django.views.generic import DetailView
 
-# Create your views here.
+from product.models import Product
+
+
+class ProductDetailView(DetailView):
+    template_name = 'product/detail.html'
+    model = Product
+    

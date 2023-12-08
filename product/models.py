@@ -19,9 +19,19 @@ class Product(models.Model):
     description = models.TextField()
     price = models.IntegerField(default=100000)
     discount = models.SmallIntegerField(blank=True, null=True, default=0)
-    image = models.ImageField(upload_to='products')
+    image = models.FileField(upload_to='products')
     size = models.ManyToManyField(Size, blank=True, null=True, related_name='products')
-    color = models.ManyToManyField(Color, related_name='colors')
+    color = models.ManyToManyField(Color, related_name='colors',)
+    infoText = models.TextField(default='no info')
 
     def __str__(self):
         return self.title
+
+
+class Information(models.Model):
+    product = models.ForeignKey(Product, null=True, on_delete=models.CASCADE, related_name='information')
+    text = models.TextField()
+
+
+    def __str__(self):
+        return self.text
