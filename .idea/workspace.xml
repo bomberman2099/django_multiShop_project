@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="752a66d9-8068-477d-b82c-c911e4468344" name="Changes" comment="">
+    <list default="true" id="704b9296-1eae-4979-b43d-f33e68711a53" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../delta/.idea/delta.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/New_shop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../delta/.idea/delta.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../delta/templates/includes/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../djangoProject/.idea/djangoProject.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../djangoProject/djangoProject/__init__.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../djangoProject/djangoProject/asgi.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../djangoProject/djangoProject/settings.py" afterDir="false" />
@@ -19,14 +23,20 @@
       <change afterPath="$PROJECT_DIR$/../djangoProject/faracode_projects/tests.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../djangoProject/faracode_projects/views.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../djangoProject/manage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New_shop/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/New_shop/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/accounts/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/accounts/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/includes/header-navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/includes/header-navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../env1/.idea/env1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../learn2/.idea/learn2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../mysite/.idea/mysite.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nestedCategory/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nestedCategory/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nestedCategory/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nestedCategory/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nestedCategory/.idea/nestedCategory.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../nestedCategory/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../statics/.idea/statics.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../weather_app/.idea/weather_app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../weather_project/.idea/weather_project.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../drf/WallProject/.idea/WallProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../drf/drf_course/.idea/drf_course.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../python" beforeDir="false" afterPath="$PROJECT_DIR$/../../python" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,51 +48,40 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
-        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2WykxALtYeZHQMw5dDWZNcwBmF9" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="2ZWrZsqyEudW2kqdbTHzmtivSTE" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/boruto/programming/django/New_shop&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/boruto/programming/django/New_shop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\boruto\programming\django\New_shop\Apps" />
-      <recent name="C:\boruto\programming\django\New_shop" />
-    </key>
-  </component>
+}]]></component>
   <component name="RunManager">
     <configuration name="New_shop" type="Python.DjangoServer" factoryName="Django server">
       <module name="New_shop" />
@@ -111,38 +110,18 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="752a66d9-8068-477d-b82c-c911e4468344" name="Changes" comment="" />
-      <created>1697712450892</created>
+      <changelist id="704b9296-1eae-4979-b43d-f33e68711a53" name="Changes" comment="" />
+      <created>1702548736182</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1697712450892</updated>
-      <workItem from="1697712483237" duration="15696000" />
-      <workItem from="1697788311938" duration="597000" />
-      <workItem from="1697793062626" duration="2796000" />
-      <workItem from="1697801212017" duration="432000" />
-      <workItem from="1697801764490" duration="5949000" />
-      <workItem from="1697827404823" duration="596000" />
-      <workItem from="1697909416915" duration="2671000" />
-      <workItem from="1697978227224" duration="1021000" />
-      <workItem from="1697985930343" duration="7200000" />
-      <workItem from="1697996661892" duration="590000" />
-      <workItem from="1698066690517" duration="8039000" />
-      <workItem from="1698302445022" duration="5536000" />
+      <updated>1702548736182</updated>
+      <workItem from="1702548738387" duration="2476000" />
+      <workItem from="1702554722709" duration="222000" />
+      <workItem from="1702554969865" duration="7402000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

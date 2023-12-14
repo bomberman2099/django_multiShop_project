@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     # installed django package
     'admin_persian',
     'widget_tweaks',
-
+    'django_render_partial',
 
     # my_apps
     'home.apps.HomeConfig',

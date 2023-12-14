@@ -1,4 +1,6 @@
 {% load static %}
+{% load render_partial  %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,11 +18,12 @@
     </div>
 </div>
 <!-- ***** Preloader End ***** -->
-
 <!-- Header -->
 <header class="">
-    {% include 'includes/header-navbar.html' %}
-</header>
+    {% include 'includes/header.html' %}
+
+    {% render_partial 'product:navbar' %}
+
 
 
 {% block content %}

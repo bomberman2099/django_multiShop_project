@@ -35,3 +35,13 @@ class Information(models.Model):
 
     def __str__(self):
         return self.text
+
+
+
+class Category(models.Model):
+    parent = models.ForeignKey('self', on_delete=models.CASCADE, blank=True, null=True, related_name='subs')
+    title = models.CharField(max_length=35)
+    slug = models.SlugField()
+
+    def __str__(self):
+        return self.title
