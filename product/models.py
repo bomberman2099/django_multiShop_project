@@ -1,3 +1,6 @@
+import datetime
+from datetime import timezone
+
 from django.db import models
 
 
@@ -22,8 +25,10 @@ class Product(models.Model):
     image = models.FileField(upload_to='products')
     size = models.ManyToManyField(Size, blank=True, null=True, related_name='products')
     color = models.ManyToManyField(Color, related_name='colors',)
-    infoText = models.TextField(default='no info')
+    created = models.DateTimeField(default=datetime.datetime.now())
 
+    class Meta:
+        ordering = ('-created',)
     def __str__(self):
         return self.title
 

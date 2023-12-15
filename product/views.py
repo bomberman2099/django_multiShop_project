@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import DetailView, TemplateView, ListView
-
+from django.core.paginator import Paginator
 from product.models import Product, Category, Size, Color
 
 
@@ -32,7 +32,8 @@ class SampleCategoryView(TemplateView):
 class ProductListView(ListView):
     template_name = 'product/shop.html'
     queryset = Product.objects.all()
-
+    paginate_by = 6
+    model = Product
     def get_context_data(self, **kwargs):
         context = super(ProductListView, self).get_context_data()
         context['size'] = Size.objects.all()
@@ -67,10 +68,18 @@ class ProductListView(ListView):
                 final_queryset = final_queryset.filter(price__range=(min_price, max_price))
         context['object_list'] = final_queryset.distinct()
 
+
+        # print(selected_colors, selected_sizes, min_price, max_price)
+
+        paginator = Paginator(queryset, self.paginate_by)
+        page_number = self.request.GET.get('page')
+        page_obj = paginator.get_page(page_number)
+
+        context['object_list'] = page_obj
         context['selected_colors'] = selected_colors
         context['min_price'] = min_price
         context['max_price'] = max_price
         context['selected_sizes'] = selected_sizes
+        context['page_obj'] = page_obj
 
-        # print(selected_colors, selected_sizes, min_price, max_price)
         return context

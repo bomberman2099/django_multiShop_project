@@ -79,8 +79,14 @@
                             <h5>Total</h5>
                             <h5>{{ cart.total }}</h5>
                         </div>
-                        <a href="{% url 'order:create_order' %}" class="btn btn-block btn-primary font-weight-bold my-3 py-3">Proceed To Checkout
+                        {% if request.user.is_authenticated %}
+                        	<a href="{% url 'order:create_order' %}" class="btn btn-block btn-primary font-weight-bold my-3 py-3">Proceed To Checkout
                         </a>
+                            {% else %}
+                            <a href="{% url 'accounts:user_login' %}?next={% url 'order:order'  %}" class="btn btn-block btn-danger font-weight-bold my-3 py-3">you need to make an account
+                        </a>
+                        {% endif %} 
+
                     </div>
                 </div>
             </div>

@@ -18,6 +18,7 @@ SMS = ghasedakpack.Ghasedak("f37be99bbfd2da5b474c9303339e6eda55f9feaedad21f211fd
 class UserLogin(View):
     def get(self, request):
         form = LoginForm()
+
         return render(request, 'accounts/login.html', {"form": form})
 
     def post(self, request):
@@ -28,10 +29,14 @@ class UserLogin(View):
             user = authenticate(username=cd['username'], password=cd['password'])
             if user is not None:
                 login(request, user)
+                next_page = request.GET.get('next')
+                if next_page:
+                    return redirect(next_page)
                 return redirect('/')
             else:
                 form.add_error('username', 'اطلاعات کاربر نامعتبر: تلفن یا رمز عبور اشتباه است')
         # form.add_error('password', f'something wrong')
+
         return render(request, 'accounts/login.html', {'form': form})
 
 
@@ -72,7 +77,11 @@ class Check_User_OTP(View):
                 user, is_created = User.objects.get_or_create(phone=otp.phone)
                 login(request, user, backend="django.contrib.auth.backends.ModelBackend")
                 otp.delete()
+                next_page = request.GET.get('next')
+                if next_page:
+                    return redirect(next_page)
                 return redirect('/')
+
         # else:
         #     form.add_error('phone', 'اطلاعات نا معتبر')
             return render(request, 'accounts/check_OTP.html', {'form': form})
