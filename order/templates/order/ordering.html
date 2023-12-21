@@ -83,7 +83,7 @@
                         	<a href="{% url 'order:create_order' %}" class="btn btn-block btn-primary font-weight-bold my-3 py-3">Proceed To Checkout
                         </a>
                             {% else %}
-                            <a href="{% url 'accounts:user_login' %}?next={% url 'order:order'  %}" class="btn btn-block btn-danger font-weight-bold my-3 py-3">you need to make an account
+                            <a href="{% url 'accounts:user_login' %}?next={% url 'order:order'  %}" class="btn btn-block btn-danger font-weight-bold my-3 py-3">login first
                         </a>
                         {% endif %} 
 
