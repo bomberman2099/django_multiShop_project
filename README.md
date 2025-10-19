@@ -32,7 +32,6 @@ A full-stack e-commerce platform built with Django, focusing on a clean architec
 - Modular code structure: separation of concerns between models, views, serializers  
 - Docker setup: easy local development and deployment (if Docker files included)  
 
-حتماً، این بخش رو به صورت کامل و قابل کپی برات آماده کردم:
 
 ````markdown
 ## 🛠 Installation & Running Locally
